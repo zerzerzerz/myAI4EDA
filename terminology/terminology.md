@@ -79,3 +79,9 @@
   - 更加详细的介绍：**Fast and Accurate Routing Demand Estimation for Efficient Routability-driven Placement**
   - 或者单纯看看怎么计算：**MaskPlace: Fast Chip Placement via Reinforced Visual Representation Learning**，看看这篇文章的附录，这篇文章虽然是从强化学习来做macro placement的，但是细节全给了，也介绍了很多AI4EDA的基本概念，很推荐读一读
   - 这两种RUDY其实有点不一样，但是都可以用来近似衡量routing阶段的拥塞（congestion）
+- endpoint
+  - timing endpoint
+  - 在电路中，从primary input出发，可以形成很多条路径，对于有时序元件（比如D触发器）参与的元件，就形成了一条timing path。当然如果额外对primary output添加时钟约束，从PI到PO的这条路径，也会是一条timing path
+  - 这条path的终点就称为timing endpoint
+  - 通常情况下，一般是D触发器的D引脚和PO作为timing endpoint
+  - 可以跑一跑OpenSTA工具的report_checks函数查看timing path和对应的endpoint
