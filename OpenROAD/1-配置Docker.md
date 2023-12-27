@@ -13,7 +13,8 @@
 - 镜像启动之后变成容器实例
 - 镜像理解为程序，是静态的，运行之后启动一个容器，容器是动态的，类似于进程
 - 拉取镜像`docker pull <image_name>:<tag>`，如想要拉取ubuntu-18.04镜像，可以`docker pull ubuntu:18.04`
-- `docker run -it <image>`
+- `docker run -it <image> bash`
+- `docker run -d <image>`直接后台运行，从image创建container
 - `docker images`查看全部镜像
 - [镜像使用](https://www.runoob.com/docker/docker-image-usage.html)
 
